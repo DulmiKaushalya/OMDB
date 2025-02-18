@@ -1,51 +1,67 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-image: url('background.jpg'); /* Make sure the path is correct */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
     padding: 20px;
     margin: 0;
-}
-
-.container {
-    position: absolute;
-    top: 10px;
-    left: 10px; /* Change to 'right: 10px;' if you want it in the top-right corner */
-    display: flex;
-    gap: 10px; /* Adds spacing between input and button */
 }
 
 input {
     width: 250px;
     padding: 10px;
-    border: 1px solid #ccc;
+    font-size: 16px;
+    border: 2px solid #4CAF50; /* Green border */
     border-radius: 5px;
+    outline: none;
+    margin: 10px auto; /* Auto centers the input */
+    display: block; /* Makes it a block element */
+    text-align: center; /* Keeps text centered inside */
 }
-
+/* Style the button */
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: #93dff4; /* Green */
+    color: black;
     border: none;
+    padding: 10px 15px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px auto; /* Auto centers the input */
+    display: block; /* Makes it a block element */
+    text-align: center; /* Keeps text centered inside */
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-img {
-    width: 300px;
-    height: auto;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Flex container to align paragraph on the left and image on the right */
+.content {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: flex-start; /* Aligns content to the left */
+    gap: 20px; /* Adds space between paragraph and image */
+    max-width: 800px; /* Prevents excessive stretching */
+    margin: 20px auto; /* Centers the content horizontally */
 }
 
+/* Paragraph styling */
 p {
     font-size: 18px;
     color: #333;
-    margin-top: 20px;
     padding: 10px;
+    max-width: 400px; /* Prevents text from being too wide */
+    text-align: left; /* Ensures text is left-aligned */
+}
+
+/* Image styling */
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
